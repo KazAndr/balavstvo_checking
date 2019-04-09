@@ -1,0 +1,2 @@
+import mytry
+mytry.echo()

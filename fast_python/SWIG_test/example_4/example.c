@@ -1,0 +1,22 @@
+/* File: example.c */
+#include "struct_h.h"
+
+struct Vector bar;
+
+int My_variable = 0;
+double density = 0.0;
+
+
+
+int fact(int n) {
+    if (n < 0){ /* This should probably return an error, but this is simpler */
+        return 0;
+    }
+    if (n == 0) {
+        return 1;
+    }
+    else {
+        /* testing for overflow would be a good idea here */
+        return n * fact(n-1);
+    }
+}
