@@ -12,6 +12,7 @@ thinkDSP/
 vika/
 new_year/
 Рисование елочки из импульсов/
+.ipynb_checkpoints/
 
 # Patterns of files
 *.pnt
