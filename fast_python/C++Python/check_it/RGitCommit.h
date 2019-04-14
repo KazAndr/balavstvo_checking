@@ -1,0 +1,5 @@
+#ifndef ROOT_RGITCOMMIT_H
+#define ROOT_RGITCOMMIT_H
+#define ROOT_GIT_BRANCH "v6-06-04"
+#define ROOT_GIT_COMMIT "v6-06-04"
+#endif

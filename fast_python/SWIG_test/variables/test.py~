@@ -1,0 +1,5 @@
+import vari
+
+print(vari.sums(1, 5))
+
+print(vari.simp())

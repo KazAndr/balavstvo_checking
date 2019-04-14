@@ -1,0 +1,7 @@
+%module example
+%include "std_vector.i"
+
+namespace std {
+   %template(vectori) vector<int>;
+   %template(vectord) vector<double>;
+};

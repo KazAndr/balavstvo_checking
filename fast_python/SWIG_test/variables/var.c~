@@ -1,0 +1,14 @@
+#include "var.h"
+
+float t = 1.2288
+
+int sums(int a, int b){
+	return a + b
+}
+
+
+void main(){
+
+	int i = 0
+	float fox = 1.258
+}

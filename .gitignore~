@@ -2,17 +2,15 @@
 3.5/
 __pycache__/
 data/
-fast_python/
 folder_for_files/
 PyQt5/
 python_for_data_analysis_McKinney/
-Python_Курс Сергея Лебедева/
 test_git/
 thinkDSP/
 vika/
 new_year/
 Рисование елочки из импульсов/
-.ipynb_chechpoints/
+.ipynb_checkpoints/
 
 # Patterns of files
 *.pnt
@@ -22,3 +20,4 @@ new_year/
 *.png
 *.pdf
 *.xls*
+
