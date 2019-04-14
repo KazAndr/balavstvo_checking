@@ -20,5 +20,5 @@ new_year/
 *.png
 *.pdf
 *.xls*
-
+*checkpoint.ipynb
 
