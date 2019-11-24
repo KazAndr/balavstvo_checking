@@ -22,3 +22,4 @@ new_year/
 *.xls*
 *checkpoint.ipynb
 
+test_interesting_code/message_receiver/config.py
