@@ -23,3 +23,4 @@ new_year/
 *checkpoint.ipynb
 
 test_interesting_code/message_receiver/config.py
+test_interesting_code/message_sender/config.py
