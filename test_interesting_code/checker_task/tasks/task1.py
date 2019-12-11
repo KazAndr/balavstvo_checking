@@ -1,13 +1,9 @@
-import os, sys
-
 #lfkdjsflkjlk
 #dmlfsklfsdf
 #ваыуаыауаыва
-a=int(input())
-b=int(input())
-c=int(input())
-if True:
-   sfdfs = 5
-sdf = k
+k = 5
+a = int(input())
+b = int(input())
+c = int(input())
 
-print (a + b + c)
+print(a + b + c)
