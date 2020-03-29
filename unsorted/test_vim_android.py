@@ -1,5 +1,5 @@
 import numpy as np
-
+a = b
 def restore(a, b, c):
     "simple introduction"
 
