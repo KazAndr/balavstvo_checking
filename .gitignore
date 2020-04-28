@@ -26,3 +26,4 @@ test_interesting_code/message_receiver/config.py
 test_interesting_code/message_sender/config.py
 *.swp
 *.fasta
+test_interesting_code/fasta_processor/group_separator.zip
