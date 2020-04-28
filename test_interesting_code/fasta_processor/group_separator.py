@@ -1,21 +1,26 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[36]:
+# In[73]:
 
 
 import os
 from collections import defaultdict
 
 
-# In[47]:
+# In[69]:
 
 
-cont_dict = defaultdict(type([]))
 cut_level = int(input('Введите число отсечки для групп: '))
 
 
-# In[48]:
+# In[70]:
+
+
+path
+
+
+# In[71]:
 
 
 with open('config.py', 'r') as conf:
@@ -23,13 +28,16 @@ with open('config.py', 'r') as conf:
     paths = conf.readlines()
 
 
-# In[49]:
+# In[72]:
 
 
 for path in paths:
+    
+    path = path.rstrip('\n')
     with open(path, 'r') as file:
         content = file.readlines()
-    
+        
+    cont_dict = defaultdict(type([]))
     for i in content:
         if len(i) <= 15: # Обратить особое внимание на то, что для других файлов это число может быть иным
             name_group = i
@@ -54,10 +62,10 @@ for path in paths:
             group_number += 1
 
 
-# In[17]:
+# In[68]:
 
 
-
+cut_level
 
 
 # In[18]:
