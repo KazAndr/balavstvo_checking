@@ -183,8 +183,19 @@ organism = driver.wait.until(EC.presence_of_element_located(
             (By.NAME, "EQ_MENU")))
 psi_blast = driver.wait.until(EC.element_to_be_clickable(
             (By.XPATH, '//*[@id="psiBlast"]')))
-organism.send_keys(f'Viruses (taxid:10239)')
-psi_blast.click()
+delta_blast = driver.wait.until(EC.element_to_be_clickable(
+            (By.XPATH, '//*[@id="deltaBlast"]')))
+
+mode = pyautogui.confirm(
+    'Enter mode of processing.',
+    buttons=['Virus+PSI-BLAST', 'DELTA-BLAST']
+)
+
+if mode == 'Virus+PSI-BLAST':
+    organism.send_keys(f'Viruses (taxid:10239)')
+    psi_blast.click()
+else:
+    delta_blast.click()
 
 start_pos = pyautogui.prompt(
     text='What element will we start processing from? (default: 1)', 
