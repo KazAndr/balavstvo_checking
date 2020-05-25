@@ -1,3 +1,7 @@
+import time
+import pyautogui
+import pyperclip
+
 def submit(message):
     time.sleep(0.5)
     pyautogui.doubleClick(TEXTBOX)
