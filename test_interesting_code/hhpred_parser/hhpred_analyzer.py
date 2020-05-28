@@ -81,11 +81,11 @@ def parse_table(html_table):
     for idx, row in first_three_sorted.iterrows():
         if row['probability'] > 60:
             if row['e_value'] < 0.1:
-                msg.append(f'{row.hit}; {row.Name}({row.probability}/{row.e_value})')
+                msg.append(f'{row.hit}; {row.Name}({row.probability}/{"{:.2e}".format(row.e_value)})')
                 saved_value += 1
             else:
                 if  0.1 <= row['e_value'] <= 8 and saved_value == 0:
-                    msg.append(f'{row.hit}; {row.Name}({row.probability}/{row.e_value})')
+                    msg.append(f'{row.hit}; {row.Name}({row.probability}/{"{:.2e}".format(row.e_value)})')
                     saved_value += 1
                     
     # Возвращаем получившееся сообщение, разделенное $
