@@ -5,12 +5,8 @@ import pyperclip
 import pandas as pd
 
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import Keys 
-
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
 
@@ -48,7 +44,6 @@ table = pd.read_excel(filename, sheet_name='Sheet1')
 driver = webdriver.Chrome()
 driver.maximize_window() 
 driver.implicitly_wait(30) # глобальное время ожидания для всех элементов
-driver.wait = WebDriverWait(driver, 5)
 # Захдим на сайт
 driver.get("https://toolkit.tuebingen.mpg.de/tools/hhpred")
 
