@@ -1,4 +1,5 @@
 import os
+import glob
 
 import pyautogui
 import pyperclip
@@ -54,8 +55,12 @@ def parsing_dscTable(table_element):
     
     
     if len(msg) == 0:
-        a = (len(table)/len(table[table.Description.str.contains('hypothetical protein')]))/100
-        ratio_hp = (1 - a) 
+        try:
+            a = (len(table)/len(table[table.Description.str.contains('hypothetical protein')]))/100
+            ratio_hp = (1 - a)
+        except ZeroDivisionError:
+            ratio_hp = 0
+            
         if ratio_hp >= 0.2:
             msg.append('hp')
         else:
@@ -166,6 +171,10 @@ def send_submit(sequence):
     return msg_main, msg_cddInfo
 
 
+default_files = sorted(glob.glob('*.xls'))
+
+if len(default_files) == 0:
+    default_files.append('Enter a filename here!')
 filename = pyautogui.prompt(
     text='Enter the name of a file for analisys:',
     title='File for analisys'
