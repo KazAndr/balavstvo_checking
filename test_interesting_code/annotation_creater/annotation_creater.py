@@ -1,3 +1,6 @@
+import glob
+import pyautogui
+
 import pandas as pd
 
 def split_blast(elem):
@@ -21,10 +24,15 @@ def split_hhpred(elem):
     else:
         elems = elem.split('$')
         return '\n'.join(elems)
-    
+
+default_files = sorted(glob.glob('*.xls'))
+
+if len(default_files) == 0:
+    default_files.append('Enter a filename here!')
 filename = pyautogui.prompt(
     text='Enter the name of a file for analisys:',
-    title='File for analisys'
+    title='File for analisys',
+    default=f'{default_files[0]}'
 )
 firts_table = pd.read_excel(filename, sheet_name='Sheet1')
 blast_table = pd.read_csv('results_blast_analyzer.csv', sep='\t', names=[1, 2])
