@@ -17,10 +17,13 @@ from selenium.common.exceptions import StaleElementReferenceException
 
 def submit(message):
     pyperclip.copy(message)
-    driver.find_element_by_xpath(xpath_textbox).send_keys(Keys.CONTROL, "a")
-    driver.find_element_by_xpath(xpath_textbox).send_keys(Keys.DELETE)
-    driver.find_element_by_xpath(xpath_textbox).send_keys(Keys.CONTROL, "v")
+
+    while driver.find_element_by_xpath(xpath_textbox).get_property("value") != message:
+        driver.find_element_by_xpath(xpath_textbox).clear()
+        driver.find_element_by_xpath(xpath_textbox).send_keys(Keys.CONTROL, "v")
+    
     driver.find_element_by_xpath(xpath_submit).click()
+
     try:
         driver.implicitly_wait(3)
         driver.find_element_by_xpath(start_job_aw).click()
@@ -62,7 +65,7 @@ time.sleep(1)
 driver.find_element_by_xpath(xpath_cookie).click()
 user_answer = pyautogui.confirm('Run the clicker for uploads?')
 if user_answer == 'OK':
-    submit('Astrophysics is the best')
+    submit('MMMMMMMMMMMMM')
     for item in table.aa_sequence:
         submit(item)
 pyautogui.alert(
