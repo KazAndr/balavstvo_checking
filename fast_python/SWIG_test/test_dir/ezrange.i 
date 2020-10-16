@@ -11,6 +11,7 @@
     import_array();
 %}
 
-%apply (int* ARGOUT_ARRAY1, int DIM1) {(int* rangevec, int n)}
+%apply (int* ARGOUT_ARRAY1, int DIM1){(int* rangevec, int n)}
 
 %include "ezrange.h"
+
